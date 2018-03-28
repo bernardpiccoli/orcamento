@@ -1,18 +1,22 @@
 <template lang="pug">
     div
         form
-            p Quantidade:
-            input(type='number', name='quantity', min='1', max='99')
-            p Descrição:
-            textarea(type='text', name='description', cols='40', rows='5')  
-            p Valor:
-            input(type='text', name='cost')
-            p Prazo:
-            input(type='number', name='deadline', min='1', max='99')
-            p Total:
-            input(type='text', name='total')
-            br
-            input(type='button', onclick="alert('mais uma linha')", value='Mais um Item')
+            el-row
+                el-col(:sm="4")
+                    p Quantidade:
+                    el-input(type='number', name='quantity', min='1', max='99')
+                el-col(:sm="4")
+                    p Descrição:
+                    el-textarea(type='text', name='description', cols='25', rows='5')
+                el-col(:sm="4")
+                    p Valor:
+                    el-input(type='text', name='cost')
+                el-col(:sm="4")
+                    p Prazo:
+                    el-input(type='number', name='deadline', min='1', max='99')
+                el-col(:sm="4")
+                    p Total:
+                    el-input(type='text', name='total')
             hr
             div
                 table
@@ -32,6 +36,10 @@
                         td 10 dias
                         td R$1.000,00
                         td Deletar
+                        el-table(:data='tableData', style='width: 100%')
+                        el-table-column(prop='date', label='Date', width='180')
+                        el-table-column(prop='name', label='Name', width='180')
+                        el-table-column(prop='address', label='Address')
 
 </template>
 
@@ -40,6 +48,11 @@ export default {
     data () {
         return {
         }
+    },
+    methods: {
+        nomeFuncao () {
+            alert('mais uma linha')
+        },
     },
 }
 </script>
