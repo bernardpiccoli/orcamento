@@ -7,7 +7,7 @@
                     el-input(type='number', name='quantity', min='1', max='99')
                 el-col(:sm="4")
                     p Descrição:
-                    el-textarea(type='text', name='description', cols='25', rows='5')
+                    el-input(type='textarea', autosize, placeholder='Please input')
                 el-col(:sm="4")
                     p Valor:
                     el-input(type='text', name='cost')
@@ -36,10 +36,11 @@
                         td 10 dias
                         td R$1.000,00
                         td Deletar
-                        el-table(:data='tableData', style='width: 100%')
-                        el-table-column(prop='date', label='Date', width='180')
-                        el-table-column(prop='name', label='Name', width='180')
-                        el-table-column(prop='address', label='Address')
+            div
+                el-table(:data='tableData', style='width: 100%')
+                el-table-column(prop='date', label='Date', width='180')
+                el-table-column(prop='name', label='Name', width='180')
+                el-table-column(prop='address', label='Address')
 
 </template>
 
