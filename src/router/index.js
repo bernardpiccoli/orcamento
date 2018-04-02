@@ -6,6 +6,7 @@ import DeadlinePage from '@/pages/General/Deadline'
 import DescriptionPage from '@/pages/General/Description'
 import IconPage from '@/pages/General/Icon'
 import SignaturePage from '@/pages/General/Signature'
+import HomePage from '@/pages/General/Home'
 
 export default [
     {
@@ -15,6 +16,12 @@ export default [
         meta: {},
         redirect: { name: 'General.Home', },
         children: [
+            {
+                path: '/',
+                name: 'General.Home',
+                component: HomePage,
+                meta: {},
+            },
             {
                 path: '/aprovacao',
                 // name: 'General.Approval',

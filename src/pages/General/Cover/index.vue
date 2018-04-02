@@ -1,13 +1,8 @@
 <template lang="pug">
-    div
-        h2 Menu
-        ul
-            li
-                router-link(:to="{ name: 'Usr.Register.List'}") Lista de registros para o usuário
-            li
-                router-link(:to="{ name: 'Adm.Register.List'}") Lista de registros para o adm
-            li
-                router-link(:to="{ name: 'General.Icon'}") Uso de Ícones
+section.height-80
+    .content
+        h1.fontnova Viewport Units s&atilde;o demais!
+        p Essa div foi setada para ter 80vh, ocupando 80% da tela =)
 </template>
 
 <script>
@@ -22,9 +17,20 @@ export default {
 <style lang="scss">
 
     @import '~@/assets/sass/collors';
-
     a {
         color: $primaryColor1;
         text-decoration: none;
+    }
+
+    .height-80 {
+        height: 80vh;
+        background: linear-gradient(45deg, #e77817 0%,#602b57 100%);
+    }
+
+    @import '~@/assets/sass/fonts';
+
+    .fontnova {
+        font-family: Eesti Ultra Bold Italic, Arial, Helvetica, sans-serif;
+        color: red;
     }
 </style>

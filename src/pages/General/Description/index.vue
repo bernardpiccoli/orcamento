@@ -1,19 +1,24 @@
 <template lang="pug">
     div
-        h2 Menu
-        ul
+        Ol
             li
-                router-link(:to="{ name: 'Usr.Register.List'}") Lista de registros para o usuário
-            li
-                router-link(:to="{ name: 'Adm.Register.List'}") Lista de registros para o adm
-            li
-                router-link(:to="{ name: 'General.Icon'}") Uso de Ícones
+                h2 {{title}}
+                h3 {{subtitle}}
+                h4 {{tableName}}
+        div
+            el-table(:data='tableData', style='width: 100%',)
+                el-table-column(prop='item', label='Item', width='120')
+                el-table-column(prop='quantity', label='Título', width='80')
+                el-table-column(prop='description', label='Descrição')
 </template>
 
 <script>
 export default {
     data () {
         return {
+            title: 'DESCRIÇÃO DO PROJETO',
+            subtitle: 'DETALHES DOS ITENS DO PROJETO',
+            tableName: 'MATERIAIS ENTREGAVEIS',
         }
     },
 }

@@ -2,6 +2,7 @@
     div
         h1 {{title}}
         router-view
+
 </template>
 
 <script>
@@ -14,5 +15,5 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 </style>

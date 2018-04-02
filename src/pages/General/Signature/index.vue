@@ -7,7 +7,7 @@
                     el-input(type='number', name='quantity', min='1', max='99')
                 el-col(:sm="4")
                     p Descrição:
-                    el-input(type='textarea', autosize, placeholder='Please input')
+                    el-input(type="textarea", cols="25")
                 el-col(:sm="4")
                     p Valor:
                     el-input(type='text', name='cost')
@@ -19,28 +19,20 @@
                     el-input(type='text', name='total')
             hr
             div
-                table
-                    tr
-                        th Item
-                        th Quantidade
-                        th Descrição
-                        th Valor
-                        th Prazo
-                        th Total
-                        th Ação
-                    tr
-                        td 1
-                        td 10
-                        td teste teste teste teste
-                        td R$100,00
-                        td 10 dias
-                        td R$1.000,00
-                        td Deletar
+                el-table(:data='tableData', style='width: 100%',)
+                    el-table-column(prop='id', label='ID', width='80')
+                    el-table-column(prop='item', label='Item', width='120')
+                    el-table-column(prop='quantity', label='Quantidade', width='80')
+                    el-table-column(prop='description', label='Descrição')
+                    el-table-column(prop='cost', label='Valor', width='80')
+                    el-table-column(prop='deadline', label='Prazo', width='80')
+                    el-table-column(prop='total', label='Total', width='80')
+                    el-table-column(prop='action', label='Ação', width='80')
             div
-                el-table(:data='tableData', style='width: 100%')
-                el-table-column(prop='date', label='Date', width='180')
-                el-table-column(prop='name', label='Name', width='180')
-                el-table-column(prop='address', label='Address')
+                el-col(:sm="8")
+                    el-button(type='primary', round='', icon='el-icon-circle-plus') Add Item
+                    el-button(type='success', round='', icon='el-icon-circle-check') Avançar
+                    el-button(type='danger', round='', icon='el-icon-error') Cancelar
 
 </template>
 
@@ -49,21 +41,42 @@ export default {
     data () {
         return {
             tableData: [{
-                date: '2016-05-03',
-                name: 'Tom',
-                address: 'No. 189, Grove St, Los Angeles',
+                id: '1',
+                item: 'Flyer',
+                quantity: '5',
+                description: 'No. 189, Grove St, Los Angeles',
+                cost: 'R$300,00',
+                deadline: '10 dias',
+                total: 'R$1500',
+                action: 'deletar',
+
             }, {
-                date: '2016-05-02',
-                name: 'Tom',
-                address: 'No. 189, Grove St, Los Angeles',
+                id: '2',
+                item: 'Flyer',
+                quantity: '5',
+                description: 'No. 189, Grove St, Los Angeles',
+                cost: 'R$300,00',
+                deadline: '10 dias',
+                total: 'R$1500',
+                action: 'deletar',
             }, {
-                date: '2016-05-04',
-                name: 'Tom',
-                address: 'No. 189, Grove St, Los Angeles',
+                id: '3',
+                item: 'Flyer',
+                quantity: '5',
+                description: 'No. 189, Grove St, Los Angeles',
+                cost: 'R$300,00',
+                deadline: '10 dias',
+                total: 'R$1500',
+                action: 'deletar',
             }, {
-                date: '2016-05-01',
-                name: 'Tom',
-                address: 'No. 189, Grove St, Los Angeles',
+                id: '4',
+                item: 'Flyer',
+                quantity: '5',
+                description: 'No. 189, Grove St, Los Angeles',
+                cost: 'R$300,00',
+                deadline: '10 dias',
+                total: 'R$1500',
+                action: 'deletar',
             }, ],
         }
     },
