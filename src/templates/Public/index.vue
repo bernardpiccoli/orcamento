@@ -1,7 +1,8 @@
 <template lang="pug">
     div
         h1 {{title}}
-        router-view
+        div
+            router-view
 
 </template>
 

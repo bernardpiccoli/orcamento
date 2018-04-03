@@ -1,6 +1,6 @@
 <template lang="pug">
     div
-        h2 Uso de Ícones
+        h2 Forma de Pagamento
         AwesomeIcon(name="bars" scale="2")
         hr
         i.el-icon-edit(style="font-size: 2rem;")

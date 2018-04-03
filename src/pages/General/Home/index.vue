@@ -6,6 +6,9 @@
                     p Quantidade:
                     el-input(type='number', name='quantity', min='1', max='99')
                 el-col(:sm="4")
+                    p Titulo:
+                    el-input(type='text', name='quantity', min='1', max='99')
+                el-col(:sm="4")
                     p Descrição:
                     el-input(type="textarea", cols="25")
                 el-col(:sm="4")
@@ -15,14 +18,12 @@
                     p Prazo:
                     el-input(type='number', name='deadline', min='1', max='99')
                 el-col(:sm="4")
-                    p Total:
-                    el-input(type='text', name='total')
             hr
             div
-                el-table(:data='tableData', style='width: 100%',)
+                el-table(:data='tableData', style='width: 100%')
                     el-table-column(prop='id', label='ID', width='80')
-                    el-table-column(prop='item', label='Item', width='120')
-                    el-table-column(prop='quantity', label='Quantidade', width='80')
+                    el-table-column(prop='item', label='Titulo', width='120')
+                    el-table-column(prop='quantity', label='Quantidade', width='100')
                     el-table-column(prop='description', label='Descrição')
                     el-table-column(prop='cost', label='Valor', width='80')
                     el-table-column(prop='deadline', label='Prazo', width='80')

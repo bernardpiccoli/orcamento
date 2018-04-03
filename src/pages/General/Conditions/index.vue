@@ -17,7 +17,7 @@
 export default {
     data () {
         return {
-            title: 'PRAZOS & INVESTIMENTO',
+            title: 'CONDIÇÕES GERAIS',
             subtitle: '',
             tableName: 'PRAZOS DE ENTREGA & INVESTIMENTO',
         }
