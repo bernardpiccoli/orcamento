@@ -1,8 +1,13 @@
 <template lang="pug">
     div
-        h1 {{title}}
+        el-row(:gutter='24')
+            el-col(:span='20')
+                .grid-content.meio
+            el-col(:span='4')
+                .grid-content.logo
         div
             router-view
+        div.rodape {{number}}
 
 </template>
 
@@ -10,11 +15,15 @@
 export default {
     data () {
         return {
-            title: 'Meu Template 2',
+            number: '1',
         }
     },
 }
 </script>
 
 <style lang="scss">
+
+@import '~@/assets/sass/fonts.scss';
+@import '~@/assets/sass/typography.scss';
+
 </style>

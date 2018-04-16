@@ -1,0 +1,236 @@
+@font-face {
+  font-family: Eesti Bold Italic;
+  font-style: normal;
+  src: url(../fonts/GTEestiProDisplayTrialBold-Italic.woff) format("woff"), url(../fonts/GTEestiProDisplayTrialBold-Italic.ttf) format("ttf");
+}
+
+@font-face {
+  font-family: Eesti Ultra Bold Italic;
+  font-style: normal;
+  src: url(../fonts/GTEestiProDisplayTrialUltraBold-Italic.woff) format("woff"), url(../fonts/GTEestiProDisplayTrialUltraBold-Italic.ttf) format("ttf");
+}
+
+@font-face {
+  font-family: Eesti Bold;
+  font-style: normal;
+  src: url(../fonts/GTEestiDisplay-Bold.woff) format("woff"), url(../fonts/GTEestiDisplay-Bold.ttf) format("ttf");
+}
+
+@font-face {
+  font-family: Eesti Light;
+  font-style: normal;
+  src: url(../fonts/GT-Eesti-Display-Light.woff) format("woff"), url(../fonts/GT-Eesti-Display-Light.ttf) format("ttf");
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: Eesti Ultra Bold Italic, Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+.negrito {
+  font-weight: bolder;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  vertical-align: middle;
+  padding: 0.2cm;
+}
+
+tfoot {
+  color: white;
+  background-color: black;
+}
+
+p.descriptionCover {
+  font-size: 0.51cm;
+  letter-spacing: 0.03cm
+}
+
+div.op2 {
+  width: 2cm;
+  display: inline-block;
+  text-align: center;
+  min-width: 8cm;
+  float: right;
+  padding-bottom: 1cm;
+  border-bottom: 1px solid black;
+}
+
+div.op1 {
+  width: 2cm;
+  display: inline-block;
+
+  text-align: center;
+  padding-bottom: 1cm;
+  min-width: 8cm;
+  border-bottom: 1px solid black;
+}
+
+.title {
+  font-size: 1.7cm;
+  text-align: right;
+  left: 0;
+  padding-left: 4cm;
+  padding-top: 2cm;
+  padding-right: 2cm;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.text-italic {
+  font-family: Eesti Bold Italic, Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+body {
+  background: white;
+  color: black;
+  font-family: Eesti Light, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+page {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+page[size="A4"] {
+  width: 21cm;
+  height: 29.7cm;
+}
+
+page[size="A4"][layout="portrait"] {
+  width: 29.7cm;
+  height: 21cm;
+}
+
+@media print {
+  body, page {
+    margin: 0;
+    box-shadow: 0;
+  }
+}
+
+.p, .text-content p {
+  line-height: 1.25;
+  margin-top: 0;
+  font-size: 0.51cm;
+  letter-spacing: 0.03cm
+}
+
+.text-subtitle:after {
+  border: 2px solid #E77817;
+  content: "";
+  display: block;
+  width: 1.846em;
+}
+
+.text-has-line:before {
+  border-top: 2px solid #602B57;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 3.429em;
+}
+
+.header {
+  padding-top: 10px;
+  text-align: center;
+  border: 2px solid #ddd;
+}
+
+.cover {
+  background: linear-gradient(45deg, rgba(231, 120, 23, 0.9), rgba(96, 43, 87, 0.9) 100%), url('../img/cover.jpg') no-repeat no-repeat center center;
+  background-size: auto 100%;
+}
+
+#logoCover {
+  width: 50%;
+}
+
+#boxLogoCover {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 21cm;
+  height: 21cm;
+}
+
+#titleCover {
+  width: 90%;
+}
+
+#boxTitleCover {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 11cm;
+  height: 5cm;
+  background-color: #f1f1f1;
+  border-radius: 0.3cm;
+  bottom: 2cm;
+  position: absolute;
+  right: 5cm;
+}
+
+.flip {
+  background: #fff;
+}
+
+.boxFlip {
+  margin: 2cm;
+}
+
+.top {
+  background: white;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 1.5cm;
+  text-align: center;
+  color: white;
+}
+
+hr {
+  display: block;
+  border: none;
+  height: 10px;
+  background-image: url(../img/hr.jpg);
+  background-repeat: no-repeat;
+}
+
+#logoTop {
+  padding-top: 0.1cm;
+  padding-right: 0.2cm;
+  height: 1.3cm;
+  right: 0;
+  position: absolute;
+}
+
+.assinatura {
+  margin-top: 4cm;
+}
+
+.footer {
+  background: linear-gradient(45deg, #e77817 0%, #602b57 100%);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1.5cm;
+  text-align: center;
+  color: white;
+}
+
+.content {
+  position: absolute;
+}

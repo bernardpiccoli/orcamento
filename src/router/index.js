@@ -1,4 +1,6 @@
 import PublicTemplate from '@/templates/Public'
+import CoverTemplate from '@/templates/Empty'
+
 import ApprovalPage from '@/pages/General/Approval'
 import CostPage from '@/pages/General/Cost'
 import CoverPage from '@/pages/General/Cover'
@@ -20,12 +22,6 @@ export default [
                 path: '/',
                 name: 'General.Home',
                 component: HomePage,
-                meta: {},
-            },
-            {
-                path: '/0',
-                name: 'General.Cover',
-                component: CoverPage,
                 meta: {},
             },
             {
@@ -62,6 +58,20 @@ export default [
                 path: '/6',
                 name: 'General.Signature',
                 component: SignaturePage,
+                meta: {},
+            },
+        ],
+    },
+    {
+        path: '',
+        name: 'Empty',
+        component: CoverTemplate,
+        meta: {},
+        redirect: {},
+        children: [
+            {
+                path: '/cover',
+                component: CoverPage,
                 meta: {},
             },
         ],
